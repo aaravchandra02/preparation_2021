@@ -11,7 +11,7 @@ def preorder_recursive(root):
         preorder_recursive(root.left)
         preorder_recursive(root.right)
 
-
+# This version has o(n) runtime and space complexity.
 def preorder_iterative(root):
     if (root == None):
         return
