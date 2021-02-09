@@ -1,4 +1,11 @@
 # Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+"""
+    Both iterative as well as recursive have:
+    runtime - O(n)
+    space - O(n)
+    """
+
+
 class TreeNode:
     # Utility function to create new node
     def __init__(self, data=0, left=None, right=None):
@@ -118,8 +125,3 @@ if (b.isSymmetric(root1)):
     print(f"\n\tThe given tree is Symmetric")
 else:
     print(f"\n\tThe given tree is not Symmetric")
-
-# root = TreeNode(1, 2, 2)
-# root.left = TreeNode(2, 3, 3)
-# root.right = TreeNode(2, 3, 3)
-# print(f"\n{a.isSymmetric(root)}\n")
