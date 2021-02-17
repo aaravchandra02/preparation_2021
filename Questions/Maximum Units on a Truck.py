@@ -43,7 +43,7 @@ class Solution:
         i = 0
         # Sorting the boxType (descending) with 'number of boxes per type' as the comparing factor.
         boxTypes = sorted(boxTypes, key=itemgetter(1), reverse=True)
-        # To check the
+        # To check the index until the all boxes can be added
         while (i < len(boxTypes)):
             if (truckSize-boxTypes[i][0]) >= 0:
                 ans += boxTypes[i][0]*boxTypes[i][1]
@@ -51,6 +51,7 @@ class Solution:
             else:
                 break
             i += 1
+        # adding the remaining boxes
         if(i < len(boxTypes)):
             ans += truckSize*boxTypes[i][1]
         print(ans)
