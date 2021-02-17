@@ -41,7 +41,9 @@ class Solution:
     def maximumUnits(self, boxTypes, truckSize):
         ans = 0
         i = 0
+        # Sorting the boxType (descending) with 'number of boxes per type' as the comparing factor.
         boxTypes = sorted(boxTypes, key=itemgetter(1), reverse=True)
+        # To check the
         while (i < len(boxTypes)):
             if (truckSize-boxTypes[i][0]) >= 0:
                 ans += boxTypes[i][0]*boxTypes[i][1]
